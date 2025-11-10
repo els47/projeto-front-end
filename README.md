@@ -36,18 +36,23 @@ Os clientes têm buscado uma forma otimizada de encontrar profissionais de fotog
 
 📦 projeto-front-end/
 │
+|
 ├── index.html                 
 │
-├── 📁 assests/                  
+|
+├── 📁 assests/    
+|   |              
 │   ├── 📁 images
 │   ├── 📁 icons
 │
+|
 ├── 📁 styles/                 
-│   ├── login.css
-│   ├── 
+│  
+| 
 │
+|
 ├── 📁 pages/           
-│   ├── 
+│   
 │
 └── README.md
 
