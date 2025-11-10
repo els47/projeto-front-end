@@ -34,28 +34,6 @@ Os clientes têm buscado uma forma otimizada de encontrar profissionais de fotog
 
 ## 📁 Estrutura do Projeto
 
-📦 projeto-front-end/
-│
-|
-├── index.html                 
-│
-|
-├── 📁 assests/    
-|   |              
-│   ├── 📁 images
-│   ├── 📁 icons
-│
-|
-├── 📁 styles/                 
-│  
-| 
-│
-|
-├── 📁 pages/           
-│   
-│
-└── README.md
-
 ## 💻 Visite o site
 
 # Projeto: Site de um portfólio
