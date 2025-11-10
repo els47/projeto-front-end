@@ -34,14 +34,25 @@ Os clientes têm buscado uma forma otimizada de encontrar profissionais de fotog
 
 ## 📁 Estrutura do Projeto
 
-```
-```
+📦 projeto-front-end/
+│
+├── index.html                 
+│
+├── 📁 assests/                  
+│   ├── 📁 images
+│   ├── 📁 icons
+│
+├── 📁 styles/                 
+│   ├── login.css
+│   ├── 
+│
+├── 📁 pages/           
+│   ├── 
+│
+└── README.md
 
 ## 💻 Visite o site
 
-```
-```
-=======
 # Projeto: Site de um portfólio
 
 Site desenvolvido para apresentação na disciplina de *Tecnologia para Front-End* com a utilização das linguagens HTML5 e CSS3.
