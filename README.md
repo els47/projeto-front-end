@@ -28,11 +28,21 @@ Os clientes têm buscado uma forma otimizada de encontrar profissionais de fotog
 ## 🛠️ Tecnologias Utilizadas
 
 * **HTML5**, **CSS3**, **JavaScript (ES6)**
-* Framework front-end (ex: React, Vue ou outro – *definir*)
-* **API REST** para conexão com o backend (*caso exista*)
 * **Git/GitHub** para controle de versão
 
 ## 📁 Estrutura do Projeto
+
+projeto-front-end/
+    |
+    index.html *Código principal*
+    assets
+        | - images *Contém as imagens utilizadas*
+        | - icons  *Contém os ícones utilizados*
+    |
+    pages *Contém os arquivos em HTML*
+    |
+    styles *Contém os arquivos em CSS* 
+
 
 ## 💻 Visite o site
 
