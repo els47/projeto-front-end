@@ -32,15 +32,15 @@ Os clientes têm buscado uma forma otimizada de encontrar profissionais de fotog
 
 ## 📁 Estrutura do Projeto
 
-* index.html - *Código principal*
+* index.html - *Arquivo com código principal*
 
 * assets
-- images *Contém as imagens utilizadas*
-- icons  *Contém os ícones utilizados*
+1. images - *Contém as imagens utilizadas*
+2. icons - *Contém os ícones utilizados*
 
-* pages *Contém os arquivos em HTML*
+* pages - *Contém os arquivos em HTML*
 
-* styles *Contém os arquivos em CSS* 
+* styles - *Contém os arquivos em CSS* 
 
 ## 💻 Visite o site
 
