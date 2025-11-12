@@ -44,6 +44,5 @@ Os clientes têm buscado uma forma otimizada de encontrar profissionais de fotog
 
 ## 💻 Visite o site
 
-# Projeto: Site de um portfólio
-
+# Projeto
 Site desenvolvido para apresentação na disciplina de *Tecnologia para Front-End* com a utilização das linguagens HTML5 e CSS3.
