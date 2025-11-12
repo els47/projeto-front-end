@@ -42,10 +42,10 @@ main {
     display: flex; /* Ativa o flexbox */
     flex-direction: row; /* Organiza elementos lado a lado (horizontal) */
     align-items: left; /* Centraliza verticalmente os elementos */
-    padding: 2rem 4rem; /* 2rem em cima/baixo, 4rem nas laterais */
+    padding: 4rem; /* 2rem em cima/baixo, 4rem nas laterais */
+    gap: 12rem; /* Espaço de 12rem entre section e aside */
     max-width: 1400px; /* Largura máxima do container */
     margin: 2rem auto 2rem auto; /* Espaço acima do main */
-    /* border: 2px solid green; */
 
     /* Seção do formulário de login */
     section {
@@ -57,16 +57,15 @@ main {
         article {
             display: flex;
             flex-direction: column; /* Empilha título e parágrafo verticalmente */
+            gap: 0;
             align-items: flex-start; /* Alinha itens à esquerda */
             color: var(--secondary-color); /* Cor do texto */
             margin-bottom: 1.5rem; /* Espaço abaixo do article */
-            /* border: 2px solid blue; */
 
             h1 {
-                font-size: 2rem; /* Tamanho da fonte do título */
+                font-size: 3rem; /* Tamanho da fonte do título */
                 font-weight: 700; /* Peso da fonte em negrito forte */
-                margin-bottom: 0rem; /* Espaço abaixo do título */
-                gap: 0;
+                margin: 0rem; /* Espaço abaixo do título */
             }
 
             p {
@@ -91,7 +90,7 @@ main {
                 padding: 0.95rem; /* Espaçamento interno de 1rem */
                 font-size: 1rem; /* Tamanho da fonte do texto digitado */
                 border: 2px solid var(--secondary-color); /* Borda sólida de 2px */
-                border-radius: 8px; /* Bordas arredondadas de 8px */
+                border-radius: 0.5rem; /* Bordas arredondadas de 8px */
                 background-color: var(--primary-color); /* Cor de fundo clara */
                 color: var(--secondary-color); /* Cor do texto digitado */
             }
@@ -131,7 +130,7 @@ main {
             font-weight: 500; /* Peso médio da fonte */
             color: var(--secondary-color); /* Texto escuro */
             background-color: var(--primary-color); /* Fundo claro */
-            border: 1px solid var(--secondary-color); /* Borda sólida escura */
+            border: 0.5px solid var(--secondary-color); /* Borda sólida escura */
             border-radius: 50px; /* Bordas arredondadas */
             cursor: pointer; /* Cursor de clique */
             display: flex; /* Ativa flexbox para alinhar ícone e texto */
@@ -179,7 +178,6 @@ main {
         flex-direction: row;
         align-items: right; /* Centraliza verticalmente */
         justify-content: right; /* Centraliza horizontalmente */
-        /* border: 2px solid red; */
 
         figure {
             display: flex;
