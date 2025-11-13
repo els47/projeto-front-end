@@ -239,6 +239,14 @@ header {
     display: block; /* Remove espaço abaixo da imagem */
 }
 
+/* Estilo do footer */
+footer {
+        text-align: center; /* Centraliza o texto do footer */
+        padding: 1rem; /* Espaçamento interno de 1rem */
+        background-color: var(--secondary-color); /* Fundo escuro no footer */
+        color: var(--primary-color); /* Texto claro no footer */
+        font-size: 0.9rem; /* Tamanho da fonte do footer */
+}
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 37.5rem) { /* 600px */
