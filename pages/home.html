@@ -1,1 +1,81 @@
-<!-- Esse é o arquivo para colocar o código referente à home/página inicial com os filtros e demais fotógrafos -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pixel</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="../assets/icons/logo-pixel-white.svg" alt="Logo pixel">
+        </figure>
+
+        <div class="perfil">
+            <img src="../assets/icons/Avatar-icon.svg" alt="foto de perfil" class="foto-perfil">
+            <button class="menu"><img src="../assets/icons/Menu-Icon.svg" alt="ícone de menu"></button> 
+        </div>
+    </header>
+        
+        <section class="busca">
+            <input type="text" placeholder="Pesquise aqui">
+            <button class="lupa"><img src="../assets/icons/Search-icon.svg" alt="Buscar"></button>
+        </section>
+
+        <div class="categorias">
+            <button class="seta"><img src="../assets/icons/Chevron-left-icon.svg" alt="seta esquerda"></button>
+                <a href="../pages/filtro.html"><button>Casamentos</button></a>
+                <button>Publicitária</button>
+                <button>Arquitetura</button>
+                <button>Gastronomia</button>
+                <button>Eventos</button>
+             <button class="seta"><img src="../assets/icons/Chevron right-icon.svg" alt="seta direita"></button>
+        </div>
+
+        <section class="galeria">
+            <div class="usuario">
+              <img src="../assets/icons/profile-1-icon.svg" alt="Ágata Souza">
+              <span>Ágata Souza</span>
+              <button class="like"><img src="../assets/icons/Heart-icon.svg" alt="like"></button>
+            </div>
+
+           <div class="grade">
+            <div class="foto"><img src="../assets/images/arq1.jpg" alt="foto 1"></div>
+            <div class="foto"><img src="../assets/images/arq2.jpg" alt="foto 2"></div>
+            <div class="foto"><img src="../assets/images/arq3.jpg" alt="foto 3"></div>
+           </div>
+        </section>
+
+        <section class="galeria">
+            <div class="usuario">
+              <img src="../assets/icons/profile-2-icon.svg" alt="Marcos Lima">
+              <span>Marcos Lima</span>
+              <button class="like"><img src="../assets/icons/Heart-icon.svg" alt="like"></button>
+            </div>
+
+            <div class="grade">
+                <div class="foto"><img src="../assets/images/gast1.jpg" alt="foto 4"></div>
+                <div class="foto"><img src="../assets/images/gast2.jpg" alt="foto 5"></div>
+                <div class="foto"><img src="../assets/images/gast3.jpg" alt="foto 6"></div>
+            </div>
+        </section>
+
+        <section class="galeria">
+            <div class="usuario">
+                <img src="../assets/icons/profile-3-icon.svg" alt="Sara Passos">
+                <span>Sara Passos</span>
+                <button class="like"><img src="../assets/icons/Heart-icon.svg" alt="like"></button>
+            </div>
+
+            <div class="grade">
+                <div class="foto"><img src="../assets/images/publ1.jpg" alt="foto 7"></div>
+                <div class="foto"><img src="../assets/images/publ2.jpg" alt="foto 8"></div>
+                <div class="foto"><img src="../assets/images/publ3.jpg" alt="foto 9"></div>
+            </div>
+        </section>
+</body>
+</html>

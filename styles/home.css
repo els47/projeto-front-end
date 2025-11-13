@@ -1,0 +1,260 @@
+/* ===== RESET GERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary-color: #FFFAFA; /* Cor principal (branco off-white) */
+    --secondary-color: #1E1E1E; /* Cor secundária (preto escuro) */
+}
+
+/* ===== COR DE FUNDO ===== */
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    background-color: var(--secondary-color); /* Fundo escuro no header */
+    display: flex; /* Ativa o flexbox para organizar elementos */
+    flex-direction: row; /* Organiza elementos em linha horizontal */
+    justify-content: space-between; /* Distribui espaço entre logo e perfil */
+    padding: 1rem; /* Espaçamento interno de 1rem em todos os lados */
+    box-shadow: 0 0.25rem 0.1875rem 0 rgba(0, 0, 0, 0.25); /* Sombra abaixo do header (4px 3px convertido) */
+
+        /* Logo dentro do header */
+        figure img {
+            flex: 0 0 auto; /* Não permite que a imagem cresça ou encolha */
+            width: 5rem; /* Largura fixa de 5rem (80px) */
+            height: 100%; /* Altura ocupa 100% do container pai */
+            padding: 0.5rem; /* Espaçamento interno ao redor da imagem (8px) */
+            background-color: transparent; /* Fundo transparente */
+            margin-left: 2rem; /* Espaço à esquerda da imagem (32px) */
+        }
+
+        .perfil {
+            display: flex; /* Ativa flexbox */
+            align-items: center; /* Centraliza verticalmente */
+            gap: 0.625rem; /* Espaço entre foto e menu (10px) */
+            margin-right: 2rem; /* Espaço à direita (32px) */
+        }
+
+        .foto-perfil {
+            width: 2.5rem; /* Largura da foto (40px) */
+            height: 2.5rem; /* Altura da foto (40px) */
+            border-radius: 50%; /* Torna a foto redonda */
+            object-fit: cover; /* Mantém proporção da imagem */
+        }
+
+        .menu {
+            width: 2.5rem; /* Largura do botão menu (40px) */
+            height: 2.5rem; /* Altura do botão menu (40px) */
+            background: none; /* Remove fundo */
+            border: none; /* Remove borda */
+            cursor: pointer; /* Cursor de mãozinha */
+        }
+}
+
+
+/* ===== BARRA DE PESQUISA ===== */
+.busca {
+    display: flex; /* Ativa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 1.875rem 0; /* Margem superior e inferior (30px) */
+    position: relative; /* Necessário para posicionar o ícone absolutamente */
+    width: 60%; /* Largura de 60% */
+    max-width: 37.5rem; /* Largura máxima (600px) */
+    margin-left: auto; /* Centraliza */
+    margin-right: auto; /* Centraliza */
+}
+
+.busca input {
+    width: 100%; /* Largura total do container */
+    padding: 0.75rem 3rem 0.75rem 1.25rem; /* Padding (12px 48px 12px 20px) - espaço à direita para o ícone */
+    border: 0.125rem solid #d6d6d6; /* Borda de 2px */
+    border-radius: 1.5625rem; /* Bordas arredondadas (25px) */
+    outline: none; /* Remove outline padrão */
+    font-size: 0.9375rem; /* Tamanho da fonte (15px) */
+}
+
+.busca button.lupa {
+    position: absolute; /* Posiciona absolutamente em relação ao .busca */
+    right: 1rem; /* Distância da borda direita (16px) */
+    border: none; /* Remove borda */
+    background: none; /* Remove fundo */
+    cursor: pointer; /* Cursor de mãozinha */
+    padding: 0.5rem; /* Padding para área de clique (8px) */
+    display: flex; /* Centraliza o ícone */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.busca button.lupa img {
+    width: 1.25rem; /* Largura do ícone (20px) */
+    height: 1.25rem; /* Altura do ícone (20px) */
+}
+
+/* ===== CATEGORIAS ===== */
+.categorias {
+    display: flex; /* Ativa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 0.625rem; /* Espaço entre botões (10px) */
+    flex-wrap: wrap; /* Quebra linha se necessário */
+    margin-bottom: 1.875rem; /* Margem inferior (30px) */
+}
+
+.categorias button {
+    background: none; /* Remove fundo */
+    border: 0.125rem solid var(--secondary-color); /* Borda de 2px */
+    border-radius: 1.5625rem; /* Bordas arredondadas (25px) */
+    padding: 0.5rem 1.125rem; /* Padding (8px 18px) */
+    cursor: pointer; /* Cursor de mãozinha */
+    font-size: 0.875rem; /* Tamanho da fonte (14px) */
+    transition: all 0.3s ease; /* Animação suave */
+}
+
+.categorias button:hover {
+    background-color: var(--secondary-color); /* Fundo escuro no hover */
+    color: white; /* Texto branco no hover */
+    border-color: var(--secondary-color); /* Mantém borda escura */
+}
+
+.seta {
+    display: flex; /* Ativa flexbox */
+    font-size: 1.5625rem; /* Tamanho da fonte (25px) */
+    border: none; /* Remove borda */
+    background: none; /* Remove fundo */
+    cursor: pointer; /* Cursor de mãozinha */
+    transition: all 0.3s ease; /* Animação suave */
+
+        img {
+            width: 2rem;
+            background: transparent;
+            margin: 0;
+            padding: 0; 
+            border-radius: 2rem; /* Borda levemente arredondada (32px) */
+        }
+}
+
+/* Inverte a cor do ícone para branco no hover */
+.seta:hover img {
+    filter: brightness(0) invert(1); /* Transforma o ícone em branco */
+}
+
+/* Adiciona fundo preto no hover */
+.seta:hover {
+    background-color: var(--secondary-color); /* Fundo escuro */
+}
+
+/* ===== GALERIA ===== */
+.galeria {
+    width: 90%; /* Largura de 90% */
+    max-width: 62.5rem; /* Largura máxima (1000px) */
+    margin: 0 auto 2.5rem; /* Centraliza e adiciona margem inferior (40px) */
+}
+
+.usuario {
+    display: flex; /* Ativa flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 0.5rem; /* Espaço entre elementos (8px) */
+    margin-bottom: 0.625rem; /* Margem inferior (10px) */
+}
+
+.usuario img {
+    width: 2.1875rem; /* Largura da foto (35px) */
+    height: 2.1875rem; /* Altura da foto (35px) */
+    border-radius: 50%; /* Torna a foto redonda */
+    border: var(--secondary-color) 0.125rem solid; /* Borda de 2px */
+    object-fit: cover; /* Mantém proporção da imagem */
+}
+
+.usuario span {
+    font-weight: 500; /* Peso médio da fonte */
+    color: var(--secondary-color); /* Cor do texto */
+    cursor: pointer; /* Cursor de mãozinha */
+    transition: all 0.3s ease; /* Animação suave de 0.3s */
+    display: inline-block; /* Necessário para transform funcionar */
+}
+
+/* Efeito hover no nome do usuário - eleva e adiciona sombra */
+.usuario span:hover {
+    transform: translateY(-0.125rem); /* Eleva levemente o texto (2px) */
+    text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2); /* Sombra sutil no texto (2px 4px) */
+}
+
+.like {
+    display: flex; /* Ativa flexbox */
+    margin-left: auto; /* Empurra para a direita */
+    background: none; /* Remove fundo */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Cursor de mãozinha */
+    transition: all 0.3s ease; /* Animação suave */
+    outline: none; /* Remove outline */
+
+    /* Remove o contorno do ícone de coração */
+    img {
+        background: transparent;
+        border: none; /* Remove borda */
+        outline: none; /* Remove outline */
+    }
+}
+
+/* Efeito hover no coração */
+.like:hover {
+    transition: all 0.3s ease; /* Animação suave na imagem */
+    transform: scale(1.2); /* Aumenta o tamanho */
+}
+
+/* ===== GRADE DE FOTOS ===== */
+.grade {
+    display: grid; /* Ativa grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr)); /* Colunas responsivas (250px mínimo) */
+    gap: 1.25rem; /* Espaço entre fotos (20px) */
+    }
+
+.foto {
+    background-color: #d3d3d3; /* Cor de fundo cinza */
+    border-radius: 0.625rem; /* Bordas arredondadas (10px) */
+    overflow: hidden; /* Esconde conteúdo que ultrapassar */
+    cursor: pointer; /* Cursor de mãozinha */
+    transition: all 0.3s ease; /* Animação suave de 0.3s */
+}
+
+/* Efeito hover nas fotos - adiciona sombra sutil */
+.foto:hover {
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.3); /* Sombra sutil ao passar o mouse (4px 6px) */
+    transform: scale(1.1); /* Aumenta o tamanho */
+}
+
+.foto img {
+    width: 100%; /* Largura total do container */
+    height: 15.625rem; /* Altura fixa (250px) */
+    object-fit: cover; /* Mantém proporção da imagem */
+    display: block; /* Remove espaço abaixo da imagem */
+}
+
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 37.5rem) { /* 600px */
+  header {
+    padding: 0.625rem 1.25rem; /* Padding menor (10px 20px) */
+  }
+
+  .busca input {
+    width: 80%; /* Aumenta largura em telas pequenas */
+  }
+
+  .categorias {
+    gap: 0.3125rem; /* Gap menor (5px) */
+  }
+
+  .foto img {
+    height: 11.25rem; /* Altura menor para mobile (180px) */
+  }
+}
