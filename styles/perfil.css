@@ -11,12 +11,6 @@
     --secondary-color: #1E1E1E; /* Cor secundária (preto escuro) */
 }
 
-/* ===== COR DE FUNDO ===== */
-body {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
 /* ===== CABEÇALHO ===== */
 header {
     background-color: var(--secondary-color); /* Fundo escuro no header */
@@ -106,6 +100,7 @@ main {
     gap: 3rem; /* Espaço entre foto e conteúdo */
     max-width: 75rem; /* Largura máxima do container (1200px) */
     margin: 0 auto; /* Centraliza o main horizontalmente com margem de 2rem acima e abaixo */
+    text-decoration: none;
 
     /* Container da foto de perfil */
     aside {
@@ -229,6 +224,17 @@ main {
             .enviar {
                 background-color: var(--secondary-color); /* Fundo escuro */
                 color: var(--primary-color); /* Texto claro */
+                text-decoration: none;
+                padding: 0.75rem 1.5rem; /* Padding (12px 24px) */
+                font-size: 0.875rem; /* Tamanho da fonte (14px) */
+                font-weight: 500; /* Peso médio da fonte */
+                border: 0.125rem solid var(--secondary-color); /* Borda de 2px */
+                border-radius: 1.5625rem; /* Bordas arredondadas (25px) */
+                cursor: pointer; /* Cursor de mãozinha */
+                transition: all 0.3s ease; /* Animação suave */
+                display: flex; /* Ativa flexbox */
+                align-items: center; /* Centraliza verticalmente */
+                gap: 0.5rem; /* Espaço entre ícone e texto */
             }
 
             .enviar:hover {
@@ -238,6 +244,7 @@ main {
         }
     }
 }
+
 
 /* ===== GALERIA ===== */
 .galeria {
@@ -286,4 +293,106 @@ footer {
         background-color: var(--secondary-color); /* Fundo escuro no footer */
         color: var(--primary-color); /* Texto claro no footer */
         font-size: 0.9rem; /* Tamanho da fonte do footer */
+}
+
+/* ===== OVERLAY DO MODAL ===== */
+/* Camada escura que cobre toda a tela quando o modal está aberto */
+.overlay {
+    position: fixed; /* Fixa o overlay na tela */
+    top: 0; /* Posiciona no topo */
+    left: 0; /* Posiciona à esquerda */
+    width: 100%; /* Largura total da tela */
+    height: 100%; /* Altura total da tela */
+    background: rgba(0, 0, 0, 0.6); /* Fundo preto semi-transparente (60% de opacidade) */
+    display: none; /* Escondido por padrão */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    z-index: 9999; /* Garante que fique acima de todos os elementos */
+}
+
+/* Mostra o overlay quando a âncora #modal está ativa */
+.overlay:target {
+    display: flex; /* Exibe o overlay usando flexbox */
+}
+
+/* ===== CAIXA DO MODAL ===== */
+.modal-box {
+    display: flex; /* Ativa flexbox */
+    flex-direction: column; /* Empilha elementos verticalmente */
+    background: var(--primary-color); /* Fundo claro (branco off-white) */
+    padding: 2rem; /* Espaçamento interno de 32px em todos os lados */
+    border-radius: 0.625rem; /* Bordas arredondadas de 10px */
+    width: 90%; /* Largura responsiva de 90% da tela */
+    max-width: 37.5rem; /* Largura máxima de 600px */
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.4); /* Sombra do modal (4px 20px) */
+}
+
+/* Título do modal */
+.modal-box h2 {
+    justify-content: left; /* Alinha o título à esquerda */
+    font-size: 1.5rem; /* Tamanho da fonte de 24px */
+    margin-bottom: 0.5rem; /* Espaço de 8px abaixo do título */
+    color: var(--secondary-color); /* Cor escura do texto */
+}
+
+/* Área de texto (textarea) do modal */
+.modal-box textarea {
+    width: 100%; /* Ocupa toda largura disponível do modal */
+    min-height: 12.5rem; /* Altura mínima de 200px */
+    padding: 1rem; /* Espaçamento interno de 16px */
+    border: 0.125rem solid var(--secondary-color); /* Borda escura de 2px */
+    border-radius: 0.5rem; /* Bordas arredondadas de 8px */
+    font-family: "Poppins", sans-serif; /* Fonte Poppins */
+    font-size: 0.875rem; /* Tamanho da fonte de 14px */
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+}
+
+/* ===== CONTAINER DOS BOTÕES DO MODAL ===== */
+.acoes {
+    display: flex; /* Ativa flexbox */
+    justify-content: flex-end; /* Alinha botões à direita */
+    align-items: center; /* Centraliza verticalmente */
+    margin-top: 1.5rem; /* Espaço de 24px acima dos botões */
+    gap: 0.625rem; /* Espaço de 10px entre botões */
+}
+
+/* ===== BOTÃO FECHAR ===== */
+.close-btn {
+    padding: 0.75rem 1.5rem; /* Espaçamento interno: 12px vertical, 24px horizontal */
+    font-size: 0.875rem; /* Tamanho da fonte de 14px */
+    font-weight: 500; /* Peso médio da fonte */
+    border: 0.125rem solid var(--secondary-color); /* Borda escura de 2px */
+    border-radius: 1.5625rem; /* Bordas arredondadas de 25px (estilo pill) */
+    cursor: pointer; /* Cursor de mãozinha ao passar o mouse */
+    transition: all 0.3s ease; /* Animação suave de 0.3 segundos */
+    background: var(--primary-color); /* Fundo claro (branco off-white) */
+    color: var(--secondary-color); /* Texto escuro */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+/* Efeito hover do botão Fechar */
+.close-btn:hover {
+    background-color: var(--secondary-color); /* Fundo escuro no hover */
+    color: var(--primary-color); /* Texto claro no hover */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.3); /* Sombra sutil de 4px 6px */
+}
+
+/* ===== BOTÃO ENVIAR ===== */
+.enviar-btn {
+    padding: 0.75rem 1.5rem; /* Espaçamento interno: 12px vertical, 24px horizontal */
+    font-size: 0.875rem; /* Tamanho da fonte de 14px */
+    font-weight: 500; /* Peso médio da fonte */
+    border: 0.125rem solid var(--secondary-color); /* Borda escura de 2px */
+    border-radius: 1.5625rem; /* Bordas arredondadas de 25px (estilo pill) */
+    cursor: pointer; /* Cursor de mãozinha ao passar o mouse */
+    transition: all 0.3s ease; /* Animação suave de 0.3 segundos */
+    background-color: var(--secondary-color); /* Fundo escuro */
+    color: var(--primary-color); /* Texto claro */
+}
+
+/* Efeito hover do botão Enviar */
+.enviar-btn:hover {
+    background-color: var(--primary-color); /* Fundo claro no hover (inverte) */
+    color: var(--secondary-color); /* Texto escuro no hover (inverte) */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.3); /* Sombra sutil de 4px 6px */
 }
