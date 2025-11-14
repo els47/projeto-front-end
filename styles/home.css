@@ -48,6 +48,7 @@ header {
             height: 2.5rem; /* Altura da foto (40px) */
             border-radius: 50%; /* Torna a foto redonda */
             object-fit: cover; /* Mantém proporção da imagem */
+            border: var(--primary-color) 2px solid;
         }
 
         .menu {
@@ -153,62 +154,83 @@ header {
 }
 
 /* ===== GALERIA ===== */
+main {
+    display: flex; /* Ativa o flexbox */
+    flex-direction: column; /* Organiza elementos lado a lado (horizontal) */
+    align-items: flex-start; /* Alinha elementos ao topo */
+    padding: 1rem; /* Espaçamento interno de 1rem em todos os lados */
+    gap: 0.5rem; /* Espaço entre foto e conteúdo */
+    max-width: 75rem; /* Largura máxima do container (1200px) */
+    margin: 2rem auto; /* Centraliza o main horizontalmente com margem de 2rem acima e abaixo */
+}
+.usuario {
+    display: flex; /* Ativa flexbox */
+    flex-direction: row; /* Organiza em linha */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 0.5rem; /* Espaço entre elementos */
+    width: 90%; /* Mesma largura da galeria */
+    max-width: 62.5rem; /* Mesma largura máxima da galeria (1000px) */
+    margin: 0 auto 1rem; /* Centraliza e adiciona margem inferior */
+}
+
+    .profile {
+        width: 2.1875rem; /* Largura da foto (35px) */
+        height: 2.1875rem; /* Altura da foto (35px) */
+        border-radius: 50%; /* Torna a foto redonda */
+        border: var(--secondary-color) 0.135rem solid;
+        object-fit: cover; /* Mantém proporção da imagem */
+    }
+
+    p {
+        font-weight: 500; /* Peso médio da fonte */
+        color: var(--secondary-color); /* Cor do texto */
+        cursor: pointer; /* Cursor de mãozinha */
+        transition: all 0.3s ease; /* Animação suave de 0.3s */
+        display: inline-block; /* Necessário para transform funcionar */
+        text-decoration: none; /* Remove sublinhado */
+    }
+    
+    p:hover {
+        transform: translateY(-0.125rem); /* Eleva levemente o texto (2px) */
+        text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2); /* Sombra sutil no texto (2px 4px) */
+    }
+
+
+/* Botão like ao lado do nome */
+.like {
+    display: flex; /* Ativa flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    background: none; /* Remove fundo padrão */
+    border: var(--secondary-color) 2px solid;
+    border-radius: 50%; /* Torna o botão redondo */
+    cursor: pointer; /* Cursor de mãozinha */
+    padding: 0; /* Padding uniforme */
+    width: 2.5rem; /* Largura fixa (40px) */
+    height: 2.5rem; /* Altura fixa (40px) */
+    transition: all 0.3s ease; /* Animação suave */
+    margin-left: auto;
+}
+
+.like img {
+    width: 1.25rem; /* Largura do ícone (20px) */
+    height: 1.25rem; /* Altura do ícone (20px) */
+    display: block; /* Remove espaço abaixo da imagem */
+}
+
+.like:hover {
+    background-color: var(--secondary-color); /* Fundo escuro no hover */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
+.like:hover img {
+    filter: brightness(0) invert(1); /* Transforma ícone em branco */
+}
+
 .galeria {
     width: 90%; /* Largura de 90% */
     max-width: 62.5rem; /* Largura máxima (1000px) */
     margin: 0 auto 2.5rem; /* Centraliza e adiciona margem inferior (40px) */
-}
-
-.usuario {
-    display: flex; /* Ativa flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 0.5rem; /* Espaço entre elementos (8px) */
-    margin-bottom: 0.625rem; /* Margem inferior (10px) */
-}
-
-.usuario img {
-    width: 2.1875rem; /* Largura da foto (35px) */
-    height: 2.1875rem; /* Altura da foto (35px) */
-    border-radius: 50%; /* Torna a foto redonda */
-    border: var(--secondary-color) 0.125rem solid; /* Borda de 2px */
-    object-fit: cover; /* Mantém proporção da imagem */
-}
-
-.usuario span {
-    font-weight: 500; /* Peso médio da fonte */
-    color: var(--secondary-color); /* Cor do texto */
-    cursor: pointer; /* Cursor de mãozinha */
-    transition: all 0.3s ease; /* Animação suave de 0.3s */
-    display: inline-block; /* Necessário para transform funcionar */
-}
-
-/* Efeito hover no nome do usuário - eleva e adiciona sombra */
-.usuario span:hover {
-    transform: translateY(-0.125rem); /* Eleva levemente o texto (2px) */
-    text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2); /* Sombra sutil no texto (2px 4px) */
-}
-
-.like {
-    display: flex; /* Ativa flexbox */
-    margin-left: auto; /* Empurra para a direita */
-    background: none; /* Remove fundo */
-    border: none; /* Remove borda */
-    cursor: pointer; /* Cursor de mãozinha */
-    transition: all 0.3s ease; /* Animação suave */
-    outline: none; /* Remove outline */
-
-    /* Remove o contorno do ícone de coração */
-    img {
-        background: transparent;
-        border: none; /* Remove borda */
-        outline: none; /* Remove outline */
-    }
-}
-
-/* Efeito hover no coração */
-.like:hover {
-    transition: all 0.3s ease; /* Animação suave na imagem */
-    transform: scale(1.2); /* Aumenta o tamanho */
 }
 
 /* ===== GRADE DE FOTOS ===== */
