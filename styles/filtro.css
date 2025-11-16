@@ -11,12 +11,6 @@
     --secondary-color: #1E1E1E; /* Cor secundária (preto escuro) */
 }
 
-/* ===== COR DE FUNDO ===== */
-body {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
 /* ===== CABEÇALHO ===== */
 header {
     background-color: var(--secondary-color); /* Fundo escuro no header */
@@ -36,6 +30,11 @@ header {
             margin-left: 2rem; /* Espaço à esquerda da imagem (32px) */
         }
 
+        .logo:hover {
+            transform: scale(1.1); /* Aumenta o tamanho */
+            cursor: pointer;
+        }
+
         .perfil {
             display: flex; /* Ativa flexbox */
             align-items: center; /* Centraliza verticalmente */
@@ -53,6 +52,29 @@ header {
         }
 }
 
+
+.voltar {
+    display: flex; /* Ativa flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    background-color: var(--secondary-color); /* Fundo escuro igual ao botão Enviar */
+    color: var(--primary-color); /* Texto claro */
+    border: 0.125rem solid var(--secondary-color); /* Borda escura de 2px */
+    border-radius: 1.5625rem; /* Bordas arredondadas (25px) igual aos outros botões */
+    cursor: pointer; /* Cursor de mãozinha */
+    padding: 0.75rem 1.5rem; /* Padding (12px 24px) igual aos outros botões */
+    font-weight: 500; /* Peso médio da fonte */
+    gap: 0.5rem; /* Espaço entre ícone e texto */
+    margin: 2rem 0 0rem 3.5rem; /* Margem: topo, direita, baixo, esquerda */
+    transition: all 0.3s ease; /* Animação suave */
+}
+
+.voltar img {
+    background-color: transparent;
+        width: 1rem; /* Largura do ícone (16px) */
+    height: 1rem; /* Altura do ícone (16px) */
+    filter: brightness(0) invert(1); /* Ícone branco */
+}
 
 /* ===== BARRA DE PESQUISA ===== */
 .busca {
@@ -93,6 +115,11 @@ header {
     height: 1.25rem; /* Altura do ícone (20px) */
 }
 
+.voltar, .busca input {
+    display: flex;
+    flex-direction: row;
+}
+
 /* ===== CATEGORIAS ===== */
 .categorias {
     display: flex; /* Ativa flexbox */
@@ -119,6 +146,11 @@ header {
     border-color: var(--secondary-color); /* Mantém borda escura */
 }
 
+#ativo {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
 .seta {
     display: flex; /* Ativa flexbox */
     font-size: 1.5625rem; /* Tamanho da fonte (25px) */
@@ -126,14 +158,14 @@ header {
     background: none; /* Remove fundo */
     cursor: pointer; /* Cursor de mãozinha */
     transition: all 0.3s ease; /* Animação suave */
-}
 
-.seta img {
-    width: 2rem;
-    background: transparent;
-    margin: 0;
-    padding: 0; 
-    border-radius: 2rem; /* Borda levemente arredondada (32px) */
+        img {
+            width: 2rem;
+            background: transparent;
+            margin: 0;
+            padding: 0; 
+            border-radius: 2rem; /* Borda levemente arredondada (32px) */
+        }
 }
 
 /* Inverte a cor do ícone para branco no hover */
@@ -166,26 +198,27 @@ main {
     margin: 0 auto 1rem; /* Centraliza e adiciona margem inferior */
 }
 
-.profile {
-    width: 2.1875rem; /* Largura da foto (35px) */
-    height: 2.1875rem; /* Altura da foto (35px) */
-    border-radius: 50%; /* Torna a foto redonda */
-    border: var(--secondary-color) 0.135rem solid;
-    object-fit: cover; /* Mantém proporção da imagem */
-}
+    .profile {
+        width: 2.1875rem; /* Largura da foto (35px) */
+        height: 2.1875rem; /* Altura da foto (35px) */
+        border-radius: 50%; /* Torna a foto redonda */
+        border: var(--secondary-color) 0.135rem solid;
+        object-fit: cover; /* Mantém proporção da imagem */
+    }
 
-p {
-    font-weight: 500; /* Peso médio da fonte */
-    color: var(--secondary-color); /* Cor do texto */
-    cursor: pointer; /* Cursor de mãozinha */
-    transition: all 0.3s ease; /* Animação suave de 0.3s */
-    display: inline-block; /* Necessário para transform funcionar */
-    text-decoration: none; /* Remove sublinhado */
-}
+    p {
+        font-weight: 500; /* Peso médio da fonte */
+        color: var(--secondary-color); /* Cor do texto */
+        cursor: pointer; /* Cursor de mãozinha */
+        transition: all 0.3s ease; /* Animação suave de 0.3s */
+        display: inline-block; /* Necessário para transform funcionar */
+        text-decoration: none; /* Remove sublinhado */
+    }
     
-p:hover {
-    transform: translateY(-0.2rem); /* Eleva levemente o texto */
-}
+    p:hover {
+        transform: translateY(-0.2rem); /* Eleva levemente o texto */
+    }
+
 
 /* Botão like ao lado do nome */
 .like {
@@ -252,6 +285,37 @@ p:hover {
     display: block; /* Remove espaço abaixo da imagem */
 }
 
+.titulo-secao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor:default;
+}
+
+.titulo-secao h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.313rem;
+    font-weight: 700;
+}
+
+.titulo-secao p {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.titulo-secao p:hover{
+    text-decoration: none;
+    transform: none;
+    text-shadow: none;
+}
+
 /* Estilo do footer */
 footer {
     text-align: center; /* Centraliza o texto do footer */
@@ -263,17 +327,23 @@ footer {
 
 /* ===== RESPONSIVIDADE ===== */
 
-/* Telas maiores que 768px - campo de busca mais estreito */
-@media (min-width: 48rem) { /* 768px */
-    .busca {
-        width: 60%; /* Largura de 60% em telas maiores */
-    }
-}
-
 /* Telas pequenas (mobile) */
 @media (max-width: 37.5rem) { /* 600px */
     header {
         padding: 0.625rem 1.25rem; /* Padding menor (10px 20px) */
+    }
+
+    .voltar {
+        justify-content: left;
+        margin-left: 1.5rem;
+    }
+
+    main {
+        padding: 0.625rem 1.25rem; /* Padding menor (10px 20px) */
+        flex-direction: column;
+        margin-bottom: 2rem;
+        align-items: center;
+        gap: 0.5rem;
     }
 
     .busca {

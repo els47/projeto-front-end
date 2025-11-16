@@ -48,14 +48,7 @@ header {
             border-radius: 50%; /* Torna a foto redonda */
             object-fit: cover; /* Mantém proporção da imagem */
             border: var(--primary-color) 2px solid;
-        }
-
-        .menu {
-            width: 2.5rem; /* Largura do botão menu (40px) */
-            height: 2.5rem; /* Altura do botão menu (40px) */
-            background: none; /* Remove fundo */
-            border: none; /* Remove borda */
-            cursor: pointer; /* Cursor de mãozinha */
+            cursor: pointer;
         }
 }
 
@@ -177,9 +170,24 @@ main {
             margin: 0 0 0.5rem 0; /* Margem inferior entre parágrafos */
             text-align:left ; /* Alinha o texto a esquerda */
             border: var(--secondary-color) 2px solid;   
-            border-radius: 1rem;
+            border-radius: 0.5rem;
             padding: 1rem;
             flex-wrap:wrap;
+            justify-content: flex-start;
+        }
+
+        .location {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+            justify-content: flex-start;
+        }
+
+        .location p {
+            border: none;
+            padding: 0;
+            margin: 0;
+            font-weight: 600;
         }
 
         /* Container dos botões */
@@ -297,7 +305,7 @@ footer {
 
 /* ===== OVERLAY DO MODAL ===== */
 /* Camada escura que cobre toda a tela quando o modal está aberto */
-.overlay {
+.overlay { /* Overlay é a sobreposição */
     position: fixed; /* Fixa o overlay na tela */
     top: 0; /* Posiciona no topo */
     left: 0; /* Posiciona à esquerda */
@@ -311,7 +319,7 @@ footer {
 }
 
 /* Mostra o overlay quando a âncora #modal está ativa */
-.overlay:target {
+.overlay:target { /* Pseudo-classe que estiliza um elemento alvo de um link de âncora <a> */
     display: flex; /* Exibe o overlay usando flexbox */
 }
 
@@ -395,4 +403,35 @@ footer {
     background-color: var(--primary-color); /* Fundo claro no hover (inverte) */
     color: var(--secondary-color); /* Texto escuro no hover (inverte) */
     box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.3); /* Sombra sutil de 4px 6px */
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Telas pequenas (mobile) */
+@media (max-width: 37.5rem) { /* 600px */
+    header {
+        padding: 0.625rem 1.25rem; /* Padding menor (10px 20px) */
+    }
+
+    .voltar {
+        justify-content: left;
+        margin-left: 1.5rem;
+    }
+
+    main {
+        padding: 0.625rem 1.25rem; /* Padding menor (10px 20px) */
+        flex-direction: column;
+        margin-bottom: 2rem;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    article {
+        align-items: center;
+    }
+
+    .botoes {
+        align-items: center;
+        justify-content: center;
+    }
 }

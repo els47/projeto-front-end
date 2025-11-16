@@ -16,6 +16,12 @@
 span {
     color: var(--secondary-color); /* Aplica a cor secundária ao texto */
     font-weight: 600; /* Deixa o texto em negrito médio */
+    display: inline-block;
+}
+
+span:hover {
+    transform: translateY(-0.125rem); /* Eleva levemente o texto */
+    cursor: pointer;
 }
 
 /* Cabeçalho da página */
@@ -65,14 +71,14 @@ main {
             margin-bottom: 1.5rem; /* Espaço abaixo do article antes do formulário */
 
             h1 {
-                font-size: 3rem; /* Tamanho da fonte do título */
+                font-size: 2rem; /* Tamanho da fonte do título */
                 font-weight: 700; /* Peso da fonte em negrito forte */
                 margin: 0; /* Remove todas as margens */
                 line-height: 1; /* Altura da linha igual ao tamanho da fonte (remove espaço extra) */
             }
 
             p {
-                font-size: 0.95rem; /* Tamanho da fonte do parágrafo */
+                font-size: 1rem; /* Tamanho da fonte do parágrafo */
                 margin: 0; /* Remove todas as margens */
                 line-height: 1.4; /* Altura de linha confortável para leitura */
             }
