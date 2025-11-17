@@ -14,45 +14,47 @@
 
 /* Estilo para todos os spans da página */
 span {
-    color: var(--secondary-color); /* Aplica a cor secundária ao texto */
+    color: var(--secondary-color); /* Aplica a cor secundária (escura) ao texto */
     font-weight: 600; /* Deixa o texto em negrito médio */
-    display: inline-block;
+    display: inline-block; /* Permite aplicar transformações (necessário para transform funcionar) */
 }
 
+/* Efeito hover nos spans */
 span:hover {
-    transform: translateY(-0.125rem); /* Eleva levemente o texto */
-    cursor: pointer;
+    transform: translateY(-0.125rem); /* Eleva levemente o texto em 2px ao passar o mouse */
+    cursor: pointer; /* Mostra cursor de mãozinha */
 }
 
-/* Cabeçalho da página */
+/* ===== CABEÇALHO ===== */
 header {
     background-color: var(--secondary-color); /* Fundo escuro no header */
     display: flex; /* Ativa o flexbox para organizar elementos */
     flex-direction: row; /* Organiza elementos em linha horizontal */
     justify-content: left; /* Alinha conteúdo à esquerda */
-    padding: 1rem; /* Espaçamento interno de 1rem em todos os lados */
-    box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.25); /* Sombra abaixo do header */
+    padding: 1rem; /* Espaçamento interno de 16px em todos os lados */
+    box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.25); /* Sombra abaixo do header (4px 3px) */
 
     /* Logo dentro do header */
     img {
         flex: 0 0 auto; /* Não permite que a imagem cresça ou encolha */
-        width: 5rem; /* Largura fixa de 5rem */
+        width: 5rem; /* Largura fixa de 80px */
         height: 100%; /* Altura ocupa 100% do container pai */
-        padding: 0.5rem; /* Espaçamento interno ao redor da imagem */
+        padding: 0.5rem; /* Espaçamento interno de 8px ao redor da imagem */
         background-color: transparent; /* Fundo transparente */
-        margin-left: 2rem; /* Espaço à esquerda da imagem */
+        margin-left: 2rem; /* Espaço de 32px à esquerda da imagem */
     }
 }
 
-/* Container principal que organiza section e aside lado a lado */
+/* ===== CONTAINER PRINCIPAL ===== */
+/* Organiza section (formulário) e aside (imagem) lado a lado */
 main {
     display: flex; /* Ativa o flexbox */
     flex-direction: row; /* Organiza elementos lado a lado (horizontal) */
     align-items: flex-start; /* Alinha elementos ao topo */
-    padding: 4rem; /* Espaçamento interno de 4rem em todos os lados */
-    gap: 12rem; /* Espaço de 12rem entre section e aside */
-    max-width: 1400px; /* Largura máxima do container */
-    margin: 2rem auto; /* Centraliza o main horizontalmente com margem de 2rem acima e abaixo */
+    padding: 4rem; /* Espaçamento interno de 64px em todos os lados */
+    gap: 12rem; /* Espaço de 192px entre section e aside */
+    max-width: 1400px; /* Largura máxima do container de 1400px */
+    margin: 2rem auto; /* Centraliza horizontalmente com margem de 32px acima e abaixo */
 
     /* Seção do formulário de login */
     section {
@@ -67,18 +69,18 @@ main {
             gap: 0; /* Remove espaçamento entre h1 e p */
             padding: 0; /* Remove padding interno */
             align-items: flex-start; /* Alinha itens à esquerda */
-            color: var(--secondary-color); /* Cor do texto */
-            margin-bottom: 1.5rem; /* Espaço abaixo do article antes do formulário */
+            color: var(--secondary-color); /* Cor escura do texto */
+            margin-bottom: 1.5rem; /* Espaço de 24px abaixo antes do formulário */
 
             h1 {
-                font-size: 2rem; /* Tamanho da fonte do título */
+                font-size: 2rem; /* Tamanho da fonte de 32px */
                 font-weight: 700; /* Peso da fonte em negrito forte */
                 margin: 0; /* Remove todas as margens */
                 line-height: 1; /* Altura da linha igual ao tamanho da fonte (remove espaço extra) */
             }
 
             p {
-                font-size: 1rem; /* Tamanho da fonte do parágrafo */
+                font-size: 1rem; /* Tamanho da fonte de 16px */
                 margin: 0; /* Remove todas as margens */
                 line-height: 1.4; /* Altura de linha confortável para leitura */
             }
@@ -88,21 +90,21 @@ main {
         form {
             display: flex; /* Ativa flexbox */
             flex-direction: column; /* Empilha campos verticalmente */
-            gap: 1rem; /* Espaço de 1rem entre cada campo do formulário */
+            gap: 1rem; /* Espaço de 16px entre cada campo do formulário */
 
             label {
-                font-size: 1rem; /* Tamanho da fonte do label */
+                font-size: 1rem; /* Tamanho da fonte de 16px */
                 font-weight: 500; /* Peso médio da fonte */
-                color: var(--secondary-color); /* Cor do texto */
+                color: var(--secondary-color); /* Cor escura do texto */
             }
 
             input {
-                padding: 0.95rem; /* Espaçamento interno de 0.95rem */
-                font-size: 1rem; /* Tamanho da fonte do texto digitado */
-                border: 2px solid var(--secondary-color); /* Borda sólida de 2px */
-                border-radius: 0.5rem; /* Bordas arredondadas de 0.5rem (8px) */
-                background-color: var(--primary-color); /* Cor de fundo clara */
-                color: var(--secondary-color); /* Cor do texto digitado */
+                padding: 0.95rem; /* Espaçamento interno de 15.2px */
+                font-size: 1rem; /* Tamanho da fonte de 16px */
+                border: 2px solid var(--secondary-color); /* Borda escura sólida de 2px */
+                border-radius: 0.5rem; /* Bordas arredondadas de 8px */
+                background-color: var(--primary-color); /* Cor de fundo clara (branco off-white) */
+                color: var(--secondary-color); /* Cor escura do texto digitado */
             }
 
             /* Estilo do placeholder dos inputs */
@@ -112,41 +114,41 @@ main {
 
             /* Botão de submit (Entrar) */
             button[type="submit"] {
-                padding: 1rem; /* Espaçamento interno de 1rem */
-                font-size: 1rem; /* Tamanho da fonte */
+                padding: 1rem; /* Espaçamento interno de 16px */
+                font-size: 1rem; /* Tamanho da fonte de 16px */
                 font-weight: 600; /* Fonte em negrito médio */
-                color: var(--primary-color); /* Texto claro (branco) */
+                color: var(--primary-color); /* Texto claro (branco off-white) */
                 background-color: var(--secondary-color); /* Fundo escuro (preto) */
                 border: none; /* Remove borda padrão do botão */
                 border-radius: 50px; /* Bordas totalmente arredondadas (formato pill) */
                 cursor: pointer; /* Mostra cursor de mãozinha ao passar o mouse */
                 transition: background-color 0.3s ease; /* Animação suave de 0.3s ao mudar cor */
-                margin-top: 1rem; /* Espaço de 1rem acima do botão */
+                margin-top: 1rem; /* Espaço de 16px acima do botão */
             }
 
             /* Efeito hover no botão de submit */
             button[type="submit"]:hover {
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao passar o mouse */
-                transition: background-color 0.3s ease; /* Animação suave ao mudar cor */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona sombra (4px 6px) ao passar o mouse */
+                transition: background-color 0.3s ease; /* Animação suave de 0.3s ao mudar cor */
             }
         }
 
         /* Botão de login com Google */
         .btn-google {
             position: relative; /* Permite posicionar pseudo-elementos absolutamente */
-            margin-top: 1.5rem; /* Espaço de 1.5rem acima do botão */
-            padding: 1rem; /* Espaçamento interno de 1rem */
-            font-size: 1rem; /* Tamanho da fonte */
+            margin-top: 1.5rem; /* Espaço de 24px acima do botão */
+            padding: 1rem; /* Espaçamento interno de 16px */
+            font-size: 1rem; /* Tamanho da fonte de 16px */
             font-weight: 500; /* Peso médio da fonte */
             color: var(--secondary-color); /* Texto escuro */
-            background-color: var(--primary-color); /* Fundo claro */
-            border: 0.5px solid var(--secondary-color); /* Borda fina de 0.5px */
+            background-color: var(--primary-color); /* Fundo claro (branco off-white) */
+            border: 0.5px solid var(--secondary-color); /* Borda fina escura de 0.5px */
             border-radius: 50px; /* Bordas totalmente arredondadas (formato pill) */
             cursor: pointer; /* Cursor de mãozinha */
             display: flex; /* Ativa flexbox para alinhar ícone e texto */
             align-items: center; /* Centraliza verticalmente */
             justify-content: center; /* Centraliza horizontalmente */
-            gap: 0.75rem; /* Espaço de 0.75rem entre ícone e texto */
+            gap: 0.75rem; /* Espaço de 12px entre ícone e texto */
             transition: background-color 0.3s ease; /* Animação suave de 0.3s */
         }
 
@@ -154,30 +156,30 @@ main {
         .btn-google::before {
             content: ''; /* Cria um elemento vazio */
             position: absolute; /* Posiciona em relação ao botão pai */
-            top: -0.75rem; /* Posiciona 0.75rem acima do botão */
+            top: -0.75rem; /* Posiciona 12px acima do botão */
             left: 0; /* Alinha à esquerda */
             right: 0; /* Alinha à direita (cria linha de ponta a ponta) */
-            height: 1px; /* Altura da linha divisória */
+            height: 1px; /* Altura da linha divisória de 1px */
             background-color: #e0e0e0; /* Cor cinza clara para a linha */
         }
 
         /* Efeito hover no botão Google */
         .btn-google:hover {
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao passar o mouse */
-            transition: background-color 0.3s ease; /* Animação suave ao mudar cor */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona sombra (4px 6px) ao passar o mouse */
+            transition: background-color 0.3s ease; /* Animação suave de 0.3s ao mudar cor */
         }
 
         /* Ícone do Google dentro do botão */
         .btn-google img {
-            width: 20px; /* Largura do ícone */
-            height: 20px; /* Altura do ícone */
+            width: 20px; /* Largura do ícone de 20px */
+            height: 20px; /* Altura do ícone de 20px */
         }
 
         /* Último parágrafo da section (Esqueceu a senha?) */
         p:last-child {
             text-align: center; /* Centraliza o texto */
-            margin-top: 1rem; /* Espaço de 1rem acima */
-            font-size: 0.95rem; /* Tamanho da fonte */
+            margin-top: 1rem; /* Espaço de 16px acima */
+            font-size: 0.95rem; /* Tamanho da fonte de 15.2px */
         }
     }
 
@@ -186,12 +188,12 @@ main {
         flex: 1; /* Ocupa 1 parte do espaço disponível (metade do main) */
         display: flex; /* Ativa flexbox */
         flex-direction: row; /* Organiza elementos em linha horizontal */
-        align-items: flex-end; /* Alinha itens ao final (direita) no eixo transversal */
+        align-items: flex-end; /* Alinha itens ao final (parte inferior) */
         justify-content: flex-end; /* Alinha conteúdo à direita */
 
         figure {
             display: flex; /* Ativa flexbox */
-            align-items: flex-end; /* Alinha imagem à direita */
+            align-items: flex-end; /* Alinha imagem ao final (parte inferior) */
             width: 100%; /* Largura total disponível */
             max-width: 550px; /* Largura máxima da figura de 550px */
         }
@@ -201,15 +203,16 @@ main {
             height: auto; /* Altura proporcional à largura (mantém aspect ratio) */
             border-radius: 16px; /* Bordas arredondadas de 16px */
             object-fit: cover; /* Mantém proporção da imagem cobrindo todo o espaço */
-            box-shadow: 0.5rem 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.20); /* Sombra abaixo do header */
+            box-shadow: 0.5rem 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.20); /* Sombra da imagem (8px 8px 8px) */
         }
     }
 }
- /* Estilo do footer */
+
+/* ===== RODAPÉ ===== */
 footer {
         text-align: center; /* Centraliza o texto do footer */
-        padding: 1rem; /* Espaçamento interno de 1rem */
+        padding: 1rem; /* Espaçamento interno de 16px */
         background-color: var(--secondary-color); /* Fundo escuro no footer */
         color: var(--primary-color); /* Texto claro no footer */
-        font-size: 0.9rem; /* Tamanho da fonte do footer */
+        font-size: 0.9rem; /* Tamanho da fonte de 14.4px */
 }

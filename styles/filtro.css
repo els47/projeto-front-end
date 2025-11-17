@@ -1,4 +1,4 @@
-/* ===== RESET GERAL ===== */
+/*  RESET GERAL  */
 * {
     margin: 0;
     padding: 0;
@@ -9,9 +9,17 @@
 :root {
     --primary-color: #FFFAFA; /* Cor principal (branco off-white) */
     --secondary-color: #1E1E1E; /* Cor secundária (preto escuro) */
+    --background-color:#f2f2f2;
+    --tertiary-color: #e6e5e5;
 }
 
-/* ===== CABEÇALHO ===== */
+/*  COR DE FUNDO  */
+body {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+/* CABEÇALHO */
 header {
     background-color: var(--secondary-color); /* Fundo escuro no header */
     display: flex; /* Ativa o flexbox para organizar elementos */
@@ -19,40 +27,35 @@ header {
     justify-content: space-between; /* Distribui espaço entre logo e perfil */
     padding: 1rem; /* Espaçamento interno de 1rem em todos os lados */
     box-shadow: 0 0.25rem 0.1875rem 0 rgba(0, 0, 0, 0.25); /* Sombra abaixo do header (4px 3px convertido) */
-
-        /* Logo dentro do header */
-        figure img {
-            flex: 0 0 auto; /* Não permite que a imagem cresça ou encolha */
-            width: 5rem; /* Largura fixa de 5rem (80px) */
-            height: 100%; /* Altura ocupa 100% do container pai */
-            padding: 0.5rem; /* Espaçamento interno ao redor da imagem (8px) */
-            background-color: transparent; /* Fundo transparente */
-            margin-left: 2rem; /* Espaço à esquerda da imagem (32px) */
-        }
-
-        .logo:hover {
-            transform: scale(1.1); /* Aumenta o tamanho */
-            cursor: pointer;
-        }
-
-        .perfil {
-            display: flex; /* Ativa flexbox */
-            align-items: center; /* Centraliza verticalmente */
-            gap: 0.625rem; /* Espaço entre foto e menu (10px) */
-            margin-right: 2rem; /* Espaço à direita (32px) */
-        }
-
-        .foto-perfil {
-            width: 2.5rem; /* Largura da foto (40px) */
-            height: 2.5rem; /* Altura da foto (40px) */
-            border-radius: 50%; /* Torna a foto redonda */
-            object-fit: cover; /* Mantém proporção da imagem */
-            border: var(--primary-color) 2px solid;
-            cursor: pointer;
-        }
 }
 
+header img {
+    flex: 0 0 auto; /* Não permite que a imagem cresça ou encolha */
+    width: 5rem; /* Largura fixa de 5rem (80px) */
+    height: 100%; /* Altura ocupa 100% do container pai */
+    padding: 0.5rem; /* Espaçamento interno ao redor da imagem (8px) */
+    background-color: transparent; /* Fundo transparente */
+    margin-left: 2rem; /* Espaço à esquerda da imagem (32px) */
+}
 
+.perfil {
+    display: flex; /* Ativa flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 0.625rem; /* Espaço entre foto e menu (10px) */
+    margin-right: 2rem; /* Espaço à direita (32px) */
+}
+
+.foto-perfil {
+    width: 2.5rem; /* Largura da foto (40px) */
+    height: 2.5rem; /* Altura da foto (40px) */
+    border-radius: 50%; /* Torna a foto redonda */
+    object-fit: cover; /* Mantém proporção da imagem */
+    padding: 0;
+    border: var(--primary-color) 2px solid;
+    cursor: pointer;
+}
+
+/* SETA DE VOLTAR */
 .voltar {
     display: flex; /* Ativa flexbox */
     align-items: center; /* Centraliza verticalmente */
@@ -71,12 +74,12 @@ header {
 
 .voltar img {
     background-color: transparent;
-        width: 1rem; /* Largura do ícone (16px) */
+    width: 1rem; /* Largura do ícone (16px) */
     height: 1rem; /* Altura do ícone (16px) */
     filter: brightness(0) invert(1); /* Ícone branco */
 }
 
-/* ===== BARRA DE PESQUISA ===== */
+/*  BARRA DE PESQUISA  */
 .busca {
     display: flex; /* Ativa flexbox */
     justify-content: center; /* Centraliza horizontalmente */
@@ -120,7 +123,7 @@ header {
     flex-direction: row;
 }
 
-/* ===== CATEGORIAS ===== */
+/*  CATEGORIAS  */
 .categorias {
     display: flex; /* Ativa flexbox */
     justify-content: center; /* Centraliza horizontalmente */
@@ -151,6 +154,36 @@ header {
     color: var(--primary-color);
 }
 
+/* SETA DE VOLTAR */
+.seta {
+    display: flex; /* Ativa flexbox */
+    font-size: 1.5625rem; /* Tamanho da fonte (25px) */
+    border: none; /* Remove borda */
+    background: none; /* Remove fundo */
+    cursor: pointer; /* Cursor de mãozinha */
+    transition: all 0.3s ease; /* Animação suave */
+}
+
+.seta img {
+    width: 2rem;
+    background: transparent;
+    margin: 0;
+    padding: 0; 
+    border-radius: 2rem; /* Borda levemente arredondada (32px) */
+}
+
+/* Inverte a cor do ícone para branco no hover */
+.seta:hover img {
+    filter: brightness(0) invert(1); /* Transforma o ícone em branco */
+}
+
+/* Adiciona fundo preto no hover */
+.seta:hover {
+    background-color: var(--secondary-color); /* Fundo escuro */
+}
+
+/* SETA DE VOLTAR */
+
 .voltar {
     display: flex; /* Ativa flexbox */
     align-items: center; /* Centraliza verticalmente */
@@ -158,9 +191,9 @@ header {
     background-color: var(--secondary-color); /* Fundo escuro igual ao botão Enviar */
     color: var(--primary-color); /* Texto claro */
     border: 0.125rem solid var(--secondary-color); /* Borda escura de 2px */
-    border-radius: 1.5625rem; /* Bordas arredondadas (25px) igual aos outros botões */
+    border-radius: 14rem;
     cursor: pointer; /* Cursor de mãozinha */
-    padding: 0.75rem 1.5rem; /* Padding (12px 24px) igual aos outros botões */
+    padding: 0.5rem 0.5rem;
     font-weight: 500; /* Peso médio da fonte */
     gap: 0.5rem; /* Espaço entre ícone e texto */
     margin: 2rem 0 0rem 3.5rem; /* Margem: topo, direita, baixo, esquerda */
@@ -183,7 +216,7 @@ header {
     filter: none; /* Remove filtro - ícone volta à cor original (escuro) */
 }
 
-/* ===== GALERIA ===== */
+/*  GALERIA  */
 main {
     display: flex; /* Ativa o flexbox */
     flex-direction: column; /* Organiza elementos lado a lado (horizontal) */
@@ -193,6 +226,7 @@ main {
     max-width: 75rem; /* Largura máxima do container (1200px) */
     margin: 2rem auto; /* Centraliza o main horizontalmente com margem de 2rem acima e abaixo */
 }
+
 .usuario {
     display: flex; /* Ativa flexbox */
     flex-direction: row; /* Organiza em linha */
@@ -203,27 +237,26 @@ main {
     margin: 0 auto 1rem; /* Centraliza e adiciona margem inferior */
 }
 
-    .profile {
-        width: 2.1875rem; /* Largura da foto (35px) */
-        height: 2.1875rem; /* Altura da foto (35px) */
-        border-radius: 50%; /* Torna a foto redonda */
-        border: var(--secondary-color) 0.135rem solid;
-        object-fit: cover; /* Mantém proporção da imagem */
-    }
+.profile {
+    width: 2.1875rem; /* Largura da foto (35px) */
+    height: 2.1875rem; /* Altura da foto (35px) */
+    border-radius: 50%; /* Torna a foto redonda */
+    border: var(--secondary-color) 0.135rem solid;
+    object-fit: cover; /* Mantém proporção da imagem */
+}
 
-    p {
-        font-weight: 500; /* Peso médio da fonte */
-        color: var(--secondary-color); /* Cor do texto */
-        cursor: pointer; /* Cursor de mãozinha */
-        transition: all 0.3s ease; /* Animação suave de 0.3s */
-        display: inline-block; /* Necessário para transform funcionar */
-        text-decoration: none; /* Remove sublinhado */
-    }
+p {
+    font-weight: 500; /* Peso médio da fonte */
+    color: var(--secondary-color); /* Cor do texto */
+    cursor: pointer; /* Cursor de mãozinha */
+    transition: all 0.3s ease; /* Animação suave de 0.3s */
+    display: inline-block; /* Necessário para transform funcionar */
+    text-decoration: none; /* Remove sublinhado */
+}
     
-    p:hover {
-        transform: translateY(-0.2rem); /* Eleva levemente o texto */
-    }
-
+p:hover {
+    transform: translateY(-0.2rem); /* Eleva levemente o texto */
+}
 
 /* Botão like ao lado do nome */
 .like {
@@ -262,12 +295,12 @@ main {
     margin: 0 auto 2.5rem; /* Centraliza e adiciona margem inferior (40px) */
 }
 
-/* ===== GRADE DE FOTOS ===== */
+/*  GRADE DE FOTOS  */
 .grade {
     display: grid; /* Ativa grid layout */
     grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr)); /* Colunas responsivas (250px mínimo) */
     gap: 1.25rem; /* Espaço entre fotos (20px) */
-    }
+}
 
 .foto {
     background-color: #d3d3d3; /* Cor de fundo cinza */
@@ -290,47 +323,46 @@ main {
     display: block; /* Remove espaço abaixo da imagem */
 }
 
+/* TÍTULO + SUBTEXTO */
 .titulo-secao {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor:default;
 }
-
 .titulo-secao h1 {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 0.313rem;
     font-weight: 700;
 }
 
 .titulo-secao p {
     text-align: center;
     width: 60%;
-    margin: auto;
+    margin: 0 auto;
     color: #666;
-    margin-bottom: 0.5rem;
     font-size: 1rem;
-    text-decoration: none;
-}
-
-.titulo-secao p:hover{
-    text-decoration: none;
     transform: none;
-    text-shadow: none;
+    cursor: default;
 }
 
 /* Estilo do footer */
 footer {
-    text-align: center; /* Centraliza o texto do footer */
-    padding: 1rem; /* Espaçamento interno de 1rem */
     background-color: var(--secondary-color); /* Fundo escuro no footer */
-    color: var(--primary-color); /* Texto claro no footer */
-    font-size: 0.9rem; /* Tamanho da fonte do footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* ===== RESPONSIVIDADE ===== */
+footer p {
+    color: var(--primary-color); /* Texto claro no footer */
+    font-size: 0.9rem;
+    padding: 1rem;
+    margin: 0 auto;
+    text-decoration: none;
+    transform: none;
+    cursor: default;
+}
+
+/*  RESPONSIVIDADE  */
 
 /* Telas pequenas (mobile) */
 @media (max-width: 37.5rem) { /* 600px */
