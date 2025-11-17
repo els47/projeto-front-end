@@ -1,4 +1,4 @@
-# 📸 Pixel | Projeto Front-End TESTE
+# 📸 Pixel | Projeto Front-End
 
 > Plataforma que conecta fotógrafos de diferentes nichos a clientes que buscam serviços fotográficos alinhados ao seu propósito.
 
